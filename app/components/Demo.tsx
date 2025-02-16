@@ -1,7 +1,8 @@
 import { useEffect, useCallback, useState } from 'react';
 import sdk, { type Context } from "@farcaster/frame-sdk";
 
-export default function Demo() {
+export default function Demo({ title }: { title?: string } = { title: "Frames v2 Demo" }) {
+  
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<Context.FrameContext>();
   const [isContextOpen, setIsContextOpen] = useState(false);
